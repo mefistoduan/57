@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>what is your name?</p>
+    <input type="text" ref="name">
+    <button @click="confirm">confirm</button>
+    <br>
+    <br>
+    <span id="message">{{message}}</span>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: ''
+        },
+        methods:{
+            confirm:function () {
+                let name = this.$refs.name.value;
+                if(!name){
+                    alert('name do not allow empty!');
+                    this.message = '';
+                    return false
+                }else{
+                    let answer = "Hello ," + name + ',nice to meet you!';
+                    this.message = answer;
+                }
+            }
+        },
+    })
+</script>
+</html>
