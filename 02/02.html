@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        what is the input string?
+    </p>
+    <input type="text" ref="thisString">
+    <button @click="confirm">confirm</button>
+    <p>
+        {{out}}
+    </p>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: ''
+        },
+        methods:{
+            confirm:function () {
+                let that = this;
+                let thisString = this.$refs.thisString.value;
+                if(!thisString){
+                    alert('please no empty!');
+                    return false
+                }else{
+                    let thisLength = this.$refs.thisString.value.length;
+                    that.out = thisString + ' has ' + thisLength +' characters.'
+                }
+            }
+        },
+    })
+</script>
+</html>
