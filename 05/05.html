@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" ref="firstNum" placeholder="firstNum">
+    <input type="text" ref="secondNum" placeholder="secondNum">
+    <button @click="confirm">confirm</button>
+    <p>
+        {{out}}
+    </p>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: ''
+        },
+        methods:{
+            confirm:function () {
+                let that = this;
+                let firstNum = this.$refs.firstNum.value;
+                let secondNum = this.$refs.secondNum.value;
+                if(!firstNum||!secondNum){
+                    alert('please no empty!');
+                    return false
+                }else{
+                    that.out
+                }
+            }
+        },
+    })
+</script>
+</html>

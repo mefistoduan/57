@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: ''
+        },
+        methods:{
+        },
+    })
+
+    $(function() {
+        $('.info h1').append('<button id="click_me">click me</button>')
+
+        $('#click_me').click(function () {
+            run();
+        })
+
+        function run() {
+        var a = function(c) {
+            $.post_withck("/j/status/delete", {
+                sid: c
+            })
+            window.location.href='https://www.douban.com/people/lovetecher/statuses?p=1'
+        };
+        var b = function(c) {
+            $.post_withck("/j/status/unreshare", {
+                sid: c
+            })
+        };
+        $("a[data-reshare-id]").each(function() {
+            b($(this).attr("data-reshare-id"));
+            $(this).hide()
+        });
+        $("div[data-sid]").each(function() {
+            a($(this).attr("data-sid"));
+            $(this).hide();
+        })
+        }
+    })();
+</script>
+</html>

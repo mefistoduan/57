@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        what is the input string?
+    </p>
+    <ul>
+        <li>
+            <em>Enter a noun</em>
+            <input type="text" ref="noun">
+        </li>
+        <li>
+            <em>Enter a verb</em>
+            <input type="text" ref="verb">
+        </li>
+        <li>
+            <em>Enter a adjective</em>
+            <input type="text" ref="adjective">
+        </li>
+        <li>
+            <em>Enter a adverb</em>
+            <input type="text" ref="adverb">
+        </li>
+    </ul>
+
+    <button @click="confirm">confirm</button>
+    <p>
+        {{out}}
+    </p>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: ''
+        },
+        methods:{
+            confirm:function () {
+                let that = this;
+                let noun = this.$refs.noun.value;
+                let verb = this.$refs.verb.value;
+                let adjective = this.$refs.adjective.value;
+                let adverb = this.$refs.adverb.value;
+                if(!noun || !verb || !adjective || !adverb){
+                    alert('please no empty!');
+                    return false
+                }else{
+                    that.out = 'Do you ' + verb + ' your ' + adjective +' '+ noun +' '+ adverb +' ? that is hilarious!';
+                }
+            }
+        },
+    })
+</script>
+</html>
