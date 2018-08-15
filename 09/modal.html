@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li>
+            <em>how many your square?</em>
+            <input type="text" ref="square" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+        <br>
+    </ul>
+    <br>
+    <div>
+        {{out}}
+    </div>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: '',
+        },
+        methods:{
+            inputFunc:function () {
+                let square = parseInt(this.$refs.square.value);
+                if(!square){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(square)){
+                    alert('not a number!');
+                    return false
+                }
+                let gallons = 0;
+                let rant = 350;
+
+                gallons = Math.ceil(square / rant);
+                gallons = gallons < 1 ? 1 : gallons;
+
+                this.out = 'you will need to purchase ' + gallons + ' gallons of paint to cover ' + square + ' square feet.';
+            }
+        },
+    })
+</script>
+</html>

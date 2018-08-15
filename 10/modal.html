@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <em>BUY BUY BUY</em>
+    <ul>
+        <li v-for="item in items">
+            <input type="text" ref="this_price" v-on:input ="inputFunc" value="1">
+            <br>
+            <input type="text" ref="this_goods" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+    </ul>
+    <br>
+    <div>
+        {{out}}
+    </div>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: '',
+            items:[
+                {price:'1',goods:'1'},
+                {price:'1',goods:'1'},
+                {price:'1',goods:'1'},
+            ]
+        },
+        methods:{
+            inputFunc:function () {
+                let this_price0 = parseInt(this.$refs.this_price[0].value);
+                let this_price1 = parseInt(this.$refs.this_price[1].value);
+                let this_price2 = parseInt(this.$refs.this_price[2].value);
+                let this_goods0 = parseInt(this.$refs.this_goods[0].value);
+                let this_goods1 = parseInt(this.$refs.this_goods[1].value);
+                let this_goods2 = parseInt(this.$refs.this_goods[2].value);
+                if(!this_price0 || !this_goods0){
+                    alert('please no empty!');
+                    return false
+                }
+                if(!this_price1 || !this_goods1){
+                    alert('please no empty!');
+                    return false
+                }
+                if(!this_price2 || !this_goods2){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(this_price0) || isNaN(this_goods0)){
+                    alert('not a number!');
+                    return false
+                }
+                if(isNaN(this_price1) || isNaN(this_goods1)){
+                    alert('not a number!');
+                    return false
+                }
+                if(isNaN(this_price2) || isNaN(this_goods2)){
+                    alert('not a number!');
+                    return false
+                }
+                let subtotal = 0;
+                let tax = 0;
+                let total = 0;
+
+                subtotal = this_price0 * this_goods0 + this_price1 * this_goods1 + this_price2 * this_goods2;
+                tax = subtotal*0.055;
+                total = subtotal + tax;
+                this.out =   'subtotal:' + subtotal +' tax:' + tax + ' total:' + total;
+            }
+        },
+    })
+</script>
+</html>

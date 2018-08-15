@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li>
+            <em>how many people?</em>
+            <input type="text" ref="this_people" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+        <li>
+            <em>how many pizzas do you have?</em>
+            <input type="text" ref="this_pizzas" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+    </ul>
+    <br>
+    <div>
+        {{out}}
+    </div>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: '',
+        },
+        methods:{
+            inputFunc:function () {
+                let this_people = parseInt(this.$refs.this_people.value);
+                let this_pizzas = parseInt(this.$refs.this_pizzas.value);
+                console.log(this_people);
+                console.log(this_pizzas);
+                if(!this_people || !this_pizzas){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(this_people) || isNaN(this_pizzas)){
+                    alert('not a number!');
+                    return false
+                }
+                let average = 0;
+                let leftover = 0;
+
+                average = Math.floor(this_pizzas / this_people);
+                leftover = this_pizzas % this_people
+
+                this.out =   this_people + " people with  " + this_pizzas + ' pizzas. Each person gets ' + average +' pices of pizza. The are ' + leftover + ' leftover pieces.'
+            }
+        },
+    })
+</script>
+</html>
