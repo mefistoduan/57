@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li>
+            <em>how many euros are you exchange?</em>
+            <input type="text" ref="enuros" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+        <li>
+            <em>what is ths exchange rate?</em>
+            <input type="text" ref="rate" v-on:input ="inputFunc" value="1">
+        </li>
+    </ul>
+    <br>
+    <div>
+        {{out}}
+    </div>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: '',
+        },
+        methods:{
+            inputFunc:function () {
+                let enuros = parseInt(this.$refs.enuros.value);
+                let rate = parseInt(this.$refs.rate.value);
+                if(!enuros){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(enuros)){
+                    alert('not a number!');
+                    return false
+                }
+                if(!rate){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(rate)){
+                    alert('not a number!');
+                    return false
+                }
+                let exchange = 0;
+
+                exchange = Math.ceil(enuros * rate);
+
+                this.out = 'you will need get ' + exchange + ' u.s. dollars';
+            }
+        },
+    })
+</script>
+</html>

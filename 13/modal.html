@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    123
+    <ul>
+        <li>
+            <em>Enter the principal?</em><br>
+            <input type="text" ref="principal" v-on:input ="inputFunc" value="1">
+        </li>
+        <br>
+        <li>
+            <em>what is ths interest rate?</em><br>
+            <input type="text" ref="rate" v-on:input ="inputFunc" value="1">
+        </li>
+        <li>
+            <em>Enter the number of number of thimes the interest</em><br>
+            <input type="text" ref="interest" v-on:input ="inputFunc" value="1">
+        </li>
+        <li>
+            <em>Enter the number of years</em><br>
+            <input type="text" ref="years" v-on:input ="inputFunc" value="1">
+        </li>
+
+    </ul>
+    <br>
+    <div>
+        {{out}}
+    </div>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            out: '',
+        },
+        methods:{
+            inputFunc:function () {
+                let that = this;
+                let principal = parseInt(this.$refs.principal.value);
+                let rate = parseInt(this.$refs.rate.value);
+                let interest = parseInt(this.$refs.interest.value);
+                let years = parseInt(this.$refs.years.value);
+                if(that.checkNum(principal))return false;
+                if(that.checkNum(rate))return false;
+                if(that.checkNum(interest))return false;
+                if(that.checkNum(years))return false;
+                let worth = 0;
+                let rates = rate/100;
+                worth = principal * Math.pow((1+rates),interest);
+
+                this.out = 'you will need get ' + worth.toFixed(2) + ' u.s. dollars';
+            },
+            checkNum:function (num){
+                console.log(num);
+                if(!num){
+                    alert('please no empty!');
+                    return false
+                }
+                if(isNaN(num)){
+                    alert('not a number!');
+                    return false
+                }
+            }
+        },
+
+    })
+</script>
+</html>
