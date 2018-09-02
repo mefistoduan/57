@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="918c6d05-820c-485d-965b-65127f5f092c" name="Default" comment="" />
+    <list default="true" id="918c6d05-820c-485d-965b-65127f5f092c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/pop/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,10 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/13/modal.html">
+        <entry file="file://$PROJECT_DIR$/pop/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="630">
+              <caret line="30" column="36" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="30" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -60,6 +63,7 @@
         <option value="$PROJECT_DIR$/11/modal.html" />
         <option value="$PROJECT_DIR$/12/modal.html" />
         <option value="$PROJECT_DIR$/13/modal.html" />
+        <option value="$PROJECT_DIR$/pop/modal.html" />
       </list>
     </option>
   </component>
@@ -69,7 +73,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1026" />
@@ -79,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,10 +95,16 @@
               <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="06" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="57" type="b2602c69:ProjectViewProjectNode" />
+              <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pop" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,18 +148,19 @@
       <workItem from="1534257142680" duration="2800000" />
       <workItem from="1534345105774" duration="5078000" />
       <workItem from="1534429833012" duration="4329000" />
-      <workItem from="1534583643775" duration="1977000" />
+      <workItem from="1534583643775" duration="2222000" />
+      <workItem from="1535903462856" duration="1227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19905000" />
+    <option name="totallyTimeSpent" value="21377000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26914662" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -178,6 +188,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/13/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/13/modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1176">
@@ -327,8 +344,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/13/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="357">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pop/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="30" selection-end-column="36" />
         </state>
       </provider>
     </entry>
