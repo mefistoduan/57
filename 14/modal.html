@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li><input type="text" placeholder="what is the order amount?" ref="amount"></li>
+        <li>what is the state?
+            <select name="" id="" ref="state">
+                <option value="WI">WI</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+        </li>
+        <li> {{subtotal}}</li>
+        <li> {{tax}}</li>
+        <li> {{total}}</li>
+        <button @click="calc">confirm</button>
+    </ul>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            subtotal: '',
+            tax: '',
+            total: '',
+        },
+        methods:{
+            calc:function () {
+                let that = this;
+                let amount = this.$refs.amount.value;
+                let state = this.$refs.state.value;
+                let basicTax = 0;
+                if(amount == '' ){
+                    alert('input is wrong!');
+                    return false
+                }
+                if(state == 'WI'){
+                    basicTax = 0.05;
+                    that.subtotal = 'the subtotal is' + amount;
+                    that.tax = 'the tax is' + parseFloat( amount * basicTax).toFixed(2);
+                }else{
+                    basicTax = 0;
+                    that.subtotal ='';
+                    that.tax = '';
+                }
+                let mid =  parseFloat(amount * basicTax) + parseFloat(amount);
+
+                that.total = 'the total is' + mid;
+
+            }
+        },
+    })
+</script>
+<style>
+    ul,li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        list-style: none;
+    }
+</style>
+</html>
