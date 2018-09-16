@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li><input type="password" placeholder="what is the order password?" ref="pwd"></li>
+        <li> {{subtotal}}</li>
+        <button @click="calc">confirm</button>
+    </ul>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            default: '12345',
+            subtotal: '',
+        },
+        methods:{
+            calc:function () {
+                let that = this;
+                let password = this.$refs.pwd.value;
+                if(password == that.default ){
+                    that.subtotal = 'welcome';
+                }else{
+                    that.subtotal = 'I do not know you !';
+                }
+
+
+
+            }
+        },
+    })
+</script>
+<style>
+    ul,li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        list-style: none;
+    }
+</style>
+</html>
