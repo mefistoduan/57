@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li><input type="text" placeholder="what is the order password?" ref="pwd"></li>
+        <li> {{subtotal}}</li>
+        <button @click="calc">confirm</button>
+    </ul>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            default: 16,
+            subtotal: '',
+        },
+        methods:{
+            calc:function () {
+                let that = this;
+                let age = this.$refs.pwd.value;
+                if(age <= 0){
+                    that.subtotal = 'age must over 0';
+                    return false
+                }
+                if(age >= that.default ){
+                    that.subtotal = 'u are enough age to legally drive';
+                }else{
+                    that.subtotal = 'u are not enough age to legally drive';
+                }
+
+
+
+            }
+        },
+    })
+</script>
+<style>
+    ul,li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        list-style: none;
+    }
+</style>
+</html>

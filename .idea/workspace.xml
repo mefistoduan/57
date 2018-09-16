@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="918c6d05-820c-485d-965b-65127f5f092c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="918c6d05-820c-485d-965b-65127f5f092c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +20,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/15/modal.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/16/modal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -74,6 +81,7 @@
         <option value="$PROJECT_DIR$/pop/modal.html" />
         <option value="$PROJECT_DIR$/14/modal.html" />
         <option value="$PROJECT_DIR$/15/modal.html" />
+        <option value="$PROJECT_DIR$/16/modal.html" />
       </list>
     </option>
   </component>
@@ -107,6 +115,11 @@
               <item name="57" type="b2602c69:ProjectViewProjectNode" />
               <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="15" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="57" type="b2602c69:ProjectViewProjectNode" />
+              <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="16" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -159,12 +172,12 @@
       <workItem from="1534583643775" duration="2222000" />
       <workItem from="1535903462856" duration="1501000" />
       <workItem from="1536844187279" duration="3066000" />
-      <workItem from="1537106244553" duration="313000" />
+      <workItem from="1537106244553" duration="559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25030000" />
+    <option name="totallyTimeSpent" value="25276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -390,7 +403,14 @@
     <entry file="file://$PROJECT_DIR$/15/modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
         </state>
       </provider>
     </entry>
