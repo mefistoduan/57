@@ -16,8 +16,8 @@
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/14/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="501">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -148,12 +148,12 @@
       <workItem from="1534429833012" duration="4329000" />
       <workItem from="1534583643775" duration="2222000" />
       <workItem from="1535903462856" duration="1501000" />
-      <workItem from="1536844187279" duration="2338000" />
+      <workItem from="1536844187279" duration="3066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23989000" />
+    <option name="totallyTimeSpent" value="24717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1026" extended-state="0" />
@@ -364,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/14/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="501">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
         </state>
       </provider>
     </entry>
