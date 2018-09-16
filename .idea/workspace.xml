@@ -29,11 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/16/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+            <state relative-caret-position="357">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="give up.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/17/give up.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -82,6 +91,7 @@
         <option value="$PROJECT_DIR$/14/modal.html" />
         <option value="$PROJECT_DIR$/15/modal.html" />
         <option value="$PROJECT_DIR$/16/modal.html" />
+        <option value="$PROJECT_DIR$/17/give up.html" />
       </list>
     </option>
   </component>
@@ -120,6 +130,11 @@
               <item name="57" type="b2602c69:ProjectViewProjectNode" />
               <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="16" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="57" type="b2602c69:ProjectViewProjectNode" />
+              <item name="57" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="17" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -172,12 +187,12 @@
       <workItem from="1534583643775" duration="2222000" />
       <workItem from="1535903462856" duration="1501000" />
       <workItem from="1536844187279" duration="3066000" />
-      <workItem from="1537106244553" duration="559000" />
+      <workItem from="1537106244553" duration="832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25276000" />
+    <option name="totallyTimeSpent" value="25549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -409,8 +424,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/16/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="357">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/17/give up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
