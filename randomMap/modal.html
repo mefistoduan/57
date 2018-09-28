@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+   <ul>
+       <li v-for="cube in cubes" :class="filterColor(cube)"></li>
+   </ul>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            cubes: [],
+            color:'land',
+            max:400,
+        },
+        methods:{
+            randomMap:function () {
+                let that = this;
+                let max = that.max;
+                let thisArr = [];
+                let num = 0;
+                for (let i = 0; i < max; i++) {
+                    num = parseInt(Math.random() * 10);
+                    thisArr.push(num);
+                }
+                that.cubes = thisArr;
+            },
+            filterColor: function (cube) {
+                let that = this;
+                let color = '';
+                switch (cube){
+                    case 1:
+                        color = 'land'
+                       break;
+                    case 2:
+                        color = 'sea'
+                       break;
+                    case 3:
+                        color = 'green'
+                       break;
+                    case 4:
+                        color = 'sand'
+                       break;
+                    case 5:
+                        color = 'tree'
+                       break;
+                    case 6:
+                        color = 'land'
+                       break;
+                    case 7:
+                        color = 'sea'
+                       break;
+                    case 8:
+                        color = 'green'
+                       break;
+                    case 9:
+                        color = 'sand'
+                       break;
+                    case 10:
+                        color =  'tree'
+                       break;
+                }
+                return color
+            }
+        },
+        created(){
+            this.randomMap();
+        },
+    })
+</script>
+<style>
+    #app {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    #app ul {
+        width:400px;
+        height: 400px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    #app li {
+        width: 20px;
+        height: 20px;
+        float: left;
+        list-style: none;
+    }
+    .land {
+        background: bisque;
+    }
+    .sea {
+        background: aqua;
+    }
+    .green {
+        background: chartreuse;
+    }
+    .sand {
+        background: blanchedalmond;
+    }
+    .tree {
+        background: green;
+    }
+
+</style>
+</html>
