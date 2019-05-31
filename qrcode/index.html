@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>二维码批量生成工具</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+</head>
+<style>
+    .item table {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="input_container">
+        <h4>
+            二维码批量生成工具
+        </h4>
+        <span>author:mefisto</span>
+        <p>
+            批量生成，数据格式如：品名：1 价格：123.00元，品名：2 价格：333.00元。
+        </p>
+        <p>
+            * 每条以逗号分隔。单条字数建议200字以内，（数字和标点符号算半个）
+        </p>
+        <textarea id="ic" cols="100" rows="10" placeholder="请输入内容">
+品名：1 价格：123.00元，品名：2 价格：333.00元
+    </textarea>
+        <br>
+        <button class="btn btn-info">点我生成</button>
+    </div>
+    <br>
+    <div class="row">
+        <div class="output"></div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $('.btn').click(function () {
+            var str = $('#ic').val();
+            var arr = str.split('，');
+            var item = '';
+            $('.row').empty();
+            arr.forEach(function (text,i) {
+                item = '<div id="qrcode'+i+'" class="item"></div>';
+                $('.row').append(item);
+            });
+
+            $('.row').find('.item').each(function (i) {
+                var text = toUtf8(arr[i]);
+                $(this).qrcode({
+                    render: "table", //也可以替换为table
+                    width: 200,//宽
+                    height: 200,//高
+                    text: text,
+                });
+            });
+
+            // 内容转码
+            function toUtf8(str) {
+                var out, i, len, c;
+                out = "";
+                len = str.length;
+                for(i = 0; i < len; i++) {
+                    c = str.charCodeAt(i);
+                    if((c >= 0x0001) && (c <= 0x007F)) {
+                        out += str.charAt(i);
+                    } else if(c > 0x07FF) {
+                        out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                        out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                        out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                    } else {
+                        out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                        out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                    }
+                }
+                return out;
+            }
+        });
+    });
+
+</script>
+
+
+</html>
